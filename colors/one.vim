@@ -350,7 +350,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
   let s:syntax_fg = s:mono_1
   let s:syntax_fold_bg = s:mono_3
-
+  
   " }}}
 
   " Vim editor color --------------------------------------------------------{{{
@@ -396,6 +396,12 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('WildMenu',     s:syntax_fg,     s:mono_3,         '')
   call <sid>X('SignColumn',   '',              s:syntax_bg,      '')
   call <sid>X('Special',      s:hue_2,         '',               '')
+  
+  if get(g:, 'one_hide_endofbuffer', 0)
+    " If enabled, will style end-of-buffer filler lines (~) to appear to be hidden.
+    call <sid>X("EndOfBuffer", s:syntax_bg, s:syntax_bg, '' ) " filler lines (~) after the last line in the buffer
+endif
+
   " }}}
 
   " Vim Help highlighting ---------------------------------------------------{{{
