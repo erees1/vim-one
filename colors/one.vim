@@ -287,7 +287,6 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
   " }}}
 
-
   " Color definition --------------------------------------------------------{{{
   let s:dark = 0
   if &background ==# 'dark'
@@ -409,6 +408,29 @@ endif
   call <sid>X('helpExample',      s:hue_6_2, '', '')
   call <sid>X('helpHeader',       s:mono_1,  '', 'bold')
   call <sid>X('helpSectionDelim', s:mono_3,  '', '')
+  " }}}
+
+  " Teriminal highlighting ---------------------------------------------------{{{
+  if has ("nvim")
+    let g:terminal_color_0 =  s:syntax_bg[0]
+    let g:terminal_color_1 =  s:hue_5[0]
+    let g:terminal_color_2 =  s:hue_4[0]
+    let g:terminal_color_3 =  s:hue_6_2[0]
+    let g:terminal_color_4 =  s:hue_2[0]
+    let g:terminal_color_5 =  s:hue_3[0]
+    let g:terminal_color_6 =  s:hue_1[0]
+    let g:terminal_color_7 =  s:mono_1[0]
+    let g:terminal_color_8 =  s:mono_4[0]
+    let g:terminal_color_9 =  s:hue_5_2[0]
+    let g:terminal_color_10 = s:hue_4[0] " No dark version[0]
+    let g:terminal_color_11 = s:hue_6[0]
+    let g:terminal_color_12 = s:hue_2[0] " No dark version[0]
+    let g:terminal_color_13 = s:hue_3[0] " No dark version[0]
+    let g:terminal_color_14 = s:hue_1[0] " No dark version[0]
+    let g:terminal_color_15 = s:mono_3[0]
+    let g:terminal_color_background = g:terminal_color_0[0]
+    let g:terminal_color_foreground = g:terminal_color_7[0]
+  endif
   " }}}
 
   " Standard syntax highlighting --------------------------------------------{{{
