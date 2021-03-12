@@ -335,7 +335,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:hue_6   = ['#986801', '94'] " orange 1
     let s:hue_6_2 = ['#c18401', '136'] " orange 2
 
-    let s:syntax_bg     = ['#fafafa', '255']
+    let s:syntax_bg     = ['#f5f5f5', '255']
     let s:syntax_gutter = ['#9e9e9e', '247']
     let s:syntax_cursor = ['#f0f0f0', '254']
 
@@ -369,7 +369,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('FoldColumn',   s:mono_3,        s:syntax_cursor,  '')
   call <sid>X('IncSearch',    s:hue_6,         '',               '')
   call <sid>X('LineNr',       s:mono_4,        '',               '')
-  call <sid>X('CursorLineNr', s:syntax_fg,     s:syntax_cursor,  'none')
+  call <sid>X('CursorLineNr', s:syntax_fg,     s:syntax_bg,  'none')
   call <sid>X('MatchParen',   s:hue_5,         s:syntax_cursor,  'underline,bold')
   call <sid>X('Italic',       '',              '',               s:italic)
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
